@@ -1,10 +1,11 @@
-package com.github.jinahya;
+package com.github.jinahya.hello;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.StandardCharsets;
 
 /**
@@ -13,6 +14,19 @@ import java.nio.charset.StandardCharsets;
  * @author Jin Kwon &lt;onacit_at_gmail.com&gt;
  */
 class HelloWorldTest {
+
+    @Test
+    void __() throws NoSuchMethodException {
+        final var constructor = HelloWorld.class.getDeclaredConstructor();
+        constructor.setAccessible(true);
+        final var thrown = Assertions.assertThrows(
+                InvocationTargetException.class,
+                constructor::newInstance
+        );
+        final var cause = thrown.getCause();
+        Assertions.assertInstanceOf(AssertionError.class, cause);
+        Assertions.assertEquals("instantiation is not allowed", cause.getMessage());
+    }
 
     /**
      * Tests {@link HelloWorld#main(String...)} method.

@@ -1,15 +1,15 @@
-package com.github.jinahya;
+package com.github.jinahya.hello;
 
 /**
  * The main program of this module whose {@link #main(String...)} method prints {@code hello, world}, to the
- * {@link System#out}, followed by a system dependency line separator.
+ * {@link System#out}, followed by a system dependent line separator.
  *
  * @author Jin Kwon &lt;onacit_at_gmail.com&gt;
  */
 public class HelloWorld {
 
     /**
-     * Prints {@code hello, world}, to the {@link System#out}, followed by a system dependency line separator.
+     * Prints {@code hello, world}, to the {@link System#out}, followed by a system dependent line separator.
      *
      * @param args command line arguments.
      */
@@ -17,7 +17,10 @@ public class HelloWorld {
         System.out.printf("hello, world%n");
     }
 
-    private HelloWorld() {
+    /**
+     * Creates a new instance, my ass.
+     */
+    private HelloWorld() { // $COVERAGE-IGNORE$
         throw new AssertionError("instantiation is not allowed");
     }
 }

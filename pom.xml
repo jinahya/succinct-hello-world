@@ -42,7 +42,7 @@
     <maven.compiler.testTarget>${maven.compiler.testSource}</maven.compiler.testTarget>
     <maven.compiler.testRelease>${maven.compiler.testTarget}</maven.compiler.testRelease>
     <version.maven-surefire>3.5.0</version.maven-surefire>
-    <mainClass>com.github.jinahya.HelloWorld</mainClass>
+    <mainClass>com.github.jinahya.hello.HelloWorld</mainClass>
   </properties>
 
   <dependencies>
@@ -212,6 +212,22 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <configuration>
+          <ruleSet>
+            <ignoreVersions>
+              <ignoreVersion>
+                <type>regex</type>
+                <version>.+-(alpha|beta).+</version>
+              </ignoreVersion>
+            </ignoreVersions>
+            <rules/>
+          </ruleSet>
+          <processDependencyManagementTransitive>false</processDependencyManagementTransitive>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
