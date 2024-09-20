@@ -4,7 +4,7 @@
 
   <groupId>com.github.jinahya</groupId>
   <artifactId>succinct-hello-world</artifactId>
-  <version>0.0.3-SNAPSHOT</version>
+  <version>0.0.3</version>
   <packaging>jar</packaging>
 
   <name>${project.artifactId}</name>
@@ -27,7 +27,7 @@
     <connection>scm:git:git@github.com:jinahya/${project.artifactId}.git</connection>
     <developerConnection>scm:git:git@github.com:jinahya/${project.artifactId}.git</developerConnection>
     <url>https://github.com/jinahya/${project.artifactId}</url>
-    <tag>HEAD</tag>
+    <tag>0.0.3</tag>
   </scm>
   <issueManagement>
     <system>GitHub Issues</system>
@@ -224,7 +224,7 @@
                 <version>.+-(alpha|beta).+</version>
               </ignoreVersion>
             </ignoreVersions>
-            <rules/>
+            <rules />
           </ruleSet>
           <processDependencyManagementTransitive>false</processDependencyManagementTransitive>
         </configuration>
