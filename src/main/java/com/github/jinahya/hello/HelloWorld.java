@@ -8,13 +8,15 @@ package com.github.jinahya.hello;
  */
 public class HelloWorld {
 
+    static final String STRING = "hello, world";
+
     /**
      * Prints {@code hello, world}, to the {@link System#out}, followed by a system dependent line separator.
      *
      * @param args command line arguments.
      */
     public static void main(String... args) {
-        System.out.printf("hello, world%n");
+        System.out.printf("$1$s%n", STRING);
     }
 
     /**

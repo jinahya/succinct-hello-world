@@ -66,7 +66,7 @@ public class HelloWorldTest {
             HelloWorld.main();
             // ---------------------------------------------------------------------------------------------------- then
             final var actual = buffer.toByteArray();
-            final var expected = ("hello, world" + System.lineSeparator()).getBytes(Charset.defaultCharset());
+            final var expected = (HelloWorld.STRING + System.lineSeparator()).getBytes(Charset.defaultCharset());
             Assertions.assertArrayEquals(actual, expected);
         } finally {
             System.setOut(out);
