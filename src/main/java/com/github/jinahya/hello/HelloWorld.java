@@ -8,6 +8,9 @@ package com.github.jinahya.hello;
  */
 public class HelloWorld {
 
+    /**
+     * The string of {@value} to print.
+     */
     static final String STRING = "hello, world";
 
     /**
@@ -16,7 +19,7 @@ public class HelloWorld {
      * @param args command line arguments.
      */
     public static void main(String... args) {
-        System.out.printf("$1$s%n", STRING);
+        System.out.printf("%1$s%n", STRING);
     }
 
     /**
