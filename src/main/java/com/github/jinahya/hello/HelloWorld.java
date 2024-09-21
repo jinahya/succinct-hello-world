@@ -18,6 +18,9 @@ public class HelloWorld {
      *
      * @param args command line arguments.
      */
+    @SuppressWarnings({
+            "java:S106" // Standard outputs should not be used directly to log anything
+    })
     public static void main(String... args) {
         System.out.printf("%1$s%n", STRING);
     }
@@ -25,7 +28,7 @@ public class HelloWorld {
     /**
      * Creates a new instance, my ass.
      */
-    private HelloWorld() { // $COVERAGE-IGNORE$
+    private HelloWorld() {
         throw new AssertionError("instantiation is not allowed");
     }
 }
