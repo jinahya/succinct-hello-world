@@ -224,7 +224,7 @@
                 <version>.+-(alpha|beta).+</version>
               </ignoreVersion>
             </ignoreVersions>
-            <rules />
+            <rules/>
           </ruleSet>
           <processDependencyManagementTransitive>false</processDependencyManagementTransitive>
         </configuration>
