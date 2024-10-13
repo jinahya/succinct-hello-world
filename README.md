@@ -2,7 +2,7 @@
 
 [![Java CI with Maven](https://github.com/jinahya/succinct-hello-world/actions/workflows/maven.yml/badge.svg)](https://github.com/jinahya/succinct-hello-world/actions/workflows/maven.yml)
 
-A fairly succinct `hello world`.
+A fairly succinct `hello world` project.
 
 Execute the `main` class.
 
